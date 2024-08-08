@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse, Http404
+from django.http.response import HttpResponse, HttpResponseRedirect, Http404
 # Create your views here.
 
 articles = {
@@ -15,7 +15,7 @@ def news_view(request, topic):
     except:
         raise Http404("404 GENERIC ERROR")
 
-def add_view(request, num1, num2):
-    add_result = num1 + num2
-    result = f"{num1} + {num2} = {add_result}"
-    return HttpResponse(str(result))
+def num_page_view(request, num_page):
+    topic_list = list(articles.keys())
+    topic = topic_list[num_page]
+    return HttpResponseRedirect(topic)
