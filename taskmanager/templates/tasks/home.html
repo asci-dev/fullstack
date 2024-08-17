@@ -1,5 +1,35 @@
 {% extends "tasks/base.html" %}
 
 {% block content %}
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ...</p>
+<style>
+        .column {
+            float: left;
+            width: 33%;
+            padding: 10px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .task {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+</style>
+<div class="row">
+        <div class="column" style="background-color:#f2f2f2;">
+            <h2>To Do</h2>
+        </div>
+
+        <div class="column" style="background-color:#e6e6e6;">
+            <h2>In Progress</h2>
+        </div>
+
+        <div class="column" style="background-color:#cccccc;">
+            <h2>Done</h2>
+        </div>
+    </div>
 {% endblock %}
