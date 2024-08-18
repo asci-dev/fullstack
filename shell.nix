@@ -12,7 +12,7 @@ pkgs.mkShell {
   nativeBuildInputs = with pkgs.buildPackages; [
     docker
     docker-compose
-    fzf
+    postgresql_14_jit
     python3
     python312Packages.psycopg
     virtualenv
