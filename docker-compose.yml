@@ -1,6 +1,6 @@
 services:
   db:
-    image: bitnami/postgresql:latest
+    image: bitnami/postgresql:14
     restart: always
     environment:
       POSTGRESQL_DATABASE: ${DB_NAME}
